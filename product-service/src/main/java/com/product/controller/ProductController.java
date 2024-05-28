@@ -1,7 +1,7 @@
-package com.example.controller;
+package com.product.controller;
 
-import com.example.entity.Product;
-import com.example.service.ProductService;
+import com.product.entity.Product;
+import com.product.service.ProductService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;

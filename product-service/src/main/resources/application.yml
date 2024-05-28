@@ -1,6 +1,18 @@
 server:
     port: 8071
 spring:
+  #数据库相关配置
+  datasource:
+    url: jdbc:mysql://120.53.103.222:3306/cloudDemo?allowPublicKeyRetrieval=true
+    username: root
+    password: Mysql123.
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    mybatis:
+      mapper-locations: classpath:mapper/*.xml
+      configuration:
+        map-underscore-to-camel-case: true
+
+  #微服务相关配置
   cloud:
     nacos:
       discovery.server-addr: 127.0.0.1:8848
@@ -9,4 +21,8 @@ spring:
           enabled: false
   application:
     name: service-provider
+
+
+
+
 

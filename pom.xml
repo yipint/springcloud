@@ -27,6 +27,7 @@
 		<springBoot.version>2.6.7</springBoot.version>
 		<spring-cloud.version>2021.0.0</spring-cloud.version>
 		<springCloud.version>2021.0.4.0</springCloud.version>
+		<mybatis.version>2.3.0</mybatis.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -45,13 +46,15 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 			<version>${springBoot.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-dependencies</artifactId>
 			<version>${spring-cloud.version}</version>
 			<type>pom</type>
-			<scope>import</scope>
+			<scope>compile</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
@@ -78,7 +81,13 @@
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>3.0.2</version>
+			<version>${mybatis.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
 		</dependency>
 
 		<!-- 可视化 -->
@@ -101,7 +110,6 @@
 		</dependency>
 
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>

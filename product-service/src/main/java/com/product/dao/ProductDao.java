@@ -1,8 +1,11 @@
-package com.example.dao;
+package com.product.dao;
 
-import com.example.entity.Product;
+import com.product.entity.Product;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Repository;
+
+
 import java.util.List;
 
 /**

@@ -1,8 +1,8 @@
-package com.example.service.impl;
+package com.product.service.impl;
 
-import com.example.entity.Product;
-import com.example.dao.ProductDao;
-import com.example.service.ProductService;
+import com.product.entity.Product;
+import com.product.dao.ProductDao;
+import com.product.service.ProductService;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -18,7 +18,7 @@ import javax.annotation.Resource;
  */
 @Service("productService")
 public class ProductServiceImpl implements ProductService {
-    @Resource
+    @Resource(type = ProductDao.class)
     private ProductDao productDao;
 
     /**

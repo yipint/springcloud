@@ -1,6 +1,6 @@
-package com.example.service;
+package com.product.service;
 
-import com.example.entity.Product;
+import com.product.entity.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
